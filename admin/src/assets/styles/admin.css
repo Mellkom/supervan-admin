@@ -296,6 +296,153 @@
     color: var(--blue-400-rgb);
 }
 
+/* === Catalog Page === */
+
+.cat-cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+/* === Order Page === */
+
+.order-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    cursor: default;
+}
+.order-table th {
+    padding: 14px 20px;
+    text-align: left;
+    color: rgb(var(--blue-200-rgb));
+    font-size: 14px;
+    border-bottom: 2px solid rgb(var(--blue-100-rgb));
+}
+.order-table td {
+    padding: 14px 20px;
+    color: rgb(var(--blue-200-rgb));
+    border-bottom: 1px solid #F0F0F0;
+    transition: 0.3s ease-in-out;
+}
+.order-table tr:hover td {
+    background-color: rgba(var(--blue-100-rgb), 0.25);
+}
+.table-edit-block {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+    border: 0.2px solid rgb(var(--blue-100-rgb));
+    border-radius: 20px;
+    padding: 20px;
+    width: 650px;
+}
+.edit-block {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.order-input {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.edit-title {
+    color: rgb(var(--blue-400-rgb));
+}
+.num-input {
+    padding: 5px 10px;
+    color: rgb(var(--blue-300-rgb));
+    border: 0.2px solid rgb(var(--blue-100-rgb));
+    border-radius: 20px;
+    outline: none;
+}
+.num-input::placeholder {
+    color: rgb(var(--blue-100-rgb));
+}
+.order-status {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.status-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.status-button {
+    padding: 5px 10px;
+    color: rgb(var(--blue-400-rgb));
+    background-color: white;
+    border: 0.1px solid rgb(var(--blue-100-rgb));
+    border-radius: 25px;
+    transition: 0.2s ease-in-out;
+}
+.status-button:hover, .status-button:active, .status-button:focus {
+    background-color: rgb(var(--blue-200-rgb));
+    color: rgb(var(--white-bg-rgb));
+    border-color: rgb(var(--blue-200-rgb));
+}
+.accept-status {
+    padding: 10px 15px;
+    border: 0.3px solid rgb(var(--blue-100-rgb));
+    border-radius: 15px;
+    color: rgb(var(--blue-400-rgb));
+    background-color: white;
+    transition: 0.3s ease-in-out;
+}
+.accept-status:hover {
+    background-color: rgb(var(--blue-200-rgb));
+    color: rgb(var(--white-bg-rgb));
+}
+
+/* paginator */
+.paginator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+    color: rgb(var(--blue-100-rgb));
+}
+
+.paginator button {
+    background-color: #fff;
+    color: rgb(var(--blue-100-rgb));
+    transition: 0.2s ease-in-out;
+}
+
+.paginator img {
+    border: 2px solid;
+    border-radius: 30px;
+    border-color: rgb(var(--blue-400-rgb));
+    transition: 0.2s ease-in-out;
+}
+
+.paginator img:hover {
+    background-color: rgb(var(--blue-100-rgb));
+}
+
+.paginator button.active {
+    color: rgb(var(--blue-400-rgb));
+}
+
+.paginator button:hover {
+    color: rgb(var(--blue-400-rgb));
+}
+
+.paginator .dots {
+    padding-right: 10px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
 /* === Homecard block === */
 
 .card-back {
@@ -314,6 +461,8 @@
 
     overflow: hidden;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+
+    cursor: pointer;
 }
 .card-back div {
     margin-left: 15px;
@@ -363,4 +512,69 @@
     align-items: center;
     gap: 12px;
     color: rgb(var(--blue-400-rgb));
+}
+
+/* === Catalog Card === */
+
+.cat-card-back {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    width: 240px;
+    border: 0.01px solid;
+    border-radius: 20px;
+    border-color: rgb(var(--blue-100-rgb));
+    background-color: #fff;
+    color: rgb(var(--blue-400-rgb));
+    padding-bottom: 15px;
+
+    overflow: hidden;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+
+    cursor: pointer;
+}
+.cat-card-back div:not(.cat-card-menu) {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.cat-card-menu {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+}
+.ccard-title {
+    width: 150px;
+}
+.ccard-text {
+    color: rgb(var(--blue-200-rgb));
+}
+.ccard-text span {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 15px;
+}
+.ccard-text img {
+    height: 15px;
+    width: 15px;
+}
+.cat-card-about {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 60px;
+    gap: 10px;
+}
+.cat-card-about span {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    color: rgb(var(--blue-400-rgb));
+}
+.cat-card-about img {
+    height: 25px;
 }

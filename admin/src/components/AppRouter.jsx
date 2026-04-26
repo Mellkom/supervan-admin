@@ -1,6 +1,6 @@
 import { routes } from "../services/routes";
 import { Routes, Route } from "react-router-dom";
-import MainLayout from "./MainLayout";
+import MainLayout from "./main-comp/MainLayout";
 import { LOGIN } from "../services/consts";
 
 function AppRouter() {

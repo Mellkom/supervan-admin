@@ -1,8 +1,8 @@
 import { NavLink, Link } from 'react-router-dom';
-import homeIcon from '../assets/images/icons/sidebar/home-icon.svg';
-import cartIcon from '../assets/images/icons/sidebar/sidebar-catalog.svg';
-import ordersIcon from '../assets/images/icons/sidebar/orders-icon.svg';
-import { HOME, CATALOG, ORDERS, LOGIN } from '../services/consts';
+import homeIcon from '../../assets/images/icons/sidebar/home-icon.svg';
+import cartIcon from '../../assets/images/icons/sidebar/sidebar-catalog.svg';
+import ordersIcon from '../../assets/images/icons/sidebar/orders-icon.svg';
+import { HOME, CATALOG, ORDERS, LOGIN } from '../../services/consts';
 
 const MENU_ITEMS = [
     { name: 'Главная', icon: homeIcon, alt: 'home-icon', path: HOME },

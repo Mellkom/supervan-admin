@@ -12,8 +12,6 @@ function HomePage() {
                 <div className='home-title text-heading-lg'>Популярные модели на сайте</div>
                 <div className='home-cards'>
                     <HomeCard />
-                    <HomeCard />
-                    <HomeCard />
                 </div>
             </div>
             <div className="feedback-block">

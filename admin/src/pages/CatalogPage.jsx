@@ -1,11 +1,12 @@
-import CardCatalog from "../components/cards/CatalogCard";
-
+import CatalogCard from "../components/cards/CatalogCard";
 
 function CatalogPage() {
     return (
-        <>
-            <CardCatalog />
-        </>
+        <section className="admin-section">
+            <div className="cat-cards">
+                <CatalogCard />
+            </div>
+        </section>
     )
 }
 
