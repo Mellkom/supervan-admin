@@ -117,6 +117,7 @@
     background-color: rgb(var(--blue-400-rgb));
     color: rgb(var(--white-bg-rgb));
     transition: 0.3s ease-in-out;
+    cursor: pointer;
 }
 .exit-btn:hover {
     color: rgb(var(--blue-100-rgb));
@@ -296,6 +297,8 @@
     color: var(--blue-400-rgb);
 }
 
+
+
 /* === Catalog Page === */
 
 .cat-cards {
@@ -304,6 +307,8 @@
     flex-wrap: wrap;
     gap: 30px;
 }
+
+
 
 /* === Order Page === */
 
@@ -443,6 +448,8 @@
     font-size: 18px;
 }
 
+
+
 /* === Homecard block === */
 
 .card-back {
@@ -514,6 +521,8 @@
     color: rgb(var(--blue-400-rgb));
 }
 
+
+
 /* === Catalog Card === */
 
 .cat-card-back {
@@ -578,3 +587,101 @@
 .cat-card-about img {
     height: 25px;
 }
+
+
+
+/* === Exit Modal === */
+
+@keyframes modalFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes modalFadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+@keyframes modalScaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes modalScaleOut {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+}
+
+.exit-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.75);
+    cursor: default;
+    animation: modalFadeIn 0.3s ease-out forwards;
+}
+.exit-modal.closing {
+    animation: modalFadeOut 0.3s ease-in forwards;
+}
+
+.modal-back {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    background-color: rgb(var(--white-bg-rgb));
+    padding: 30px 50px;
+    border-radius: 20px;
+    animation: modalScaleIn 0.3s ease-out forwards;
+}
+.modal-back.closing {
+    animation: modalScaleOut 0.3s ease-in forwards;
+}
+.m-ex-title {
+    color: rgb(var(--blue-400-rgb));
+}
+.exit-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+.exit-button {
+    background-color: rgb(var(--white-bg-rgb));
+    padding: 5px;
+    border: 0.1px solid rgb(var(--blue-100-rgb));
+    border-radius: 10px;
+    color: rgb(var(--blue-300-rgb));
+    transition: 0.3s ease-in-out;
+}
+.exit-button-menu {
+    background-color: rgb(var(--white-bg-rgb));
+    padding: 5px;
+    border: 0.1px solid rgb(var(--blue-100-rgb));
+    border-radius: 10px;
+    color: rgb(var(--blue-300-rgb));
+    transition: 0.3s ease-in-out;
+}
+.exit-button:hover, .exit-button-menu:hover {
+    background-color: rgb(var(--blue-300-rgb));
+    color: rgb(var(--white-bg-rgb));
+}
+
+
+
+/* === Product Modal === */

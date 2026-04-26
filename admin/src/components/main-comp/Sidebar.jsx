@@ -3,6 +3,8 @@ import homeIcon from '../../assets/images/icons/sidebar/home-icon.svg';
 import cartIcon from '../../assets/images/icons/sidebar/sidebar-catalog.svg';
 import ordersIcon from '../../assets/images/icons/sidebar/orders-icon.svg';
 import { HOME, CATALOG, ORDERS, LOGIN } from '../../services/consts';
+import { useState } from 'react';
+import ExitModal from '../modals/ExitModal';
 
 const MENU_ITEMS = [
     { name: 'Главная', icon: homeIcon, alt: 'home-icon', path: HOME },
@@ -11,6 +13,9 @@ const MENU_ITEMS = [
 ];
 
 function Sidebar() {
+
+    const [open, setOpen] = useState(false);
+
     return(
         <aside className="sidebar-section">
             <div className="sidebar-title text-heading-xl">ElectroVan</div>
@@ -31,7 +36,9 @@ function Sidebar() {
             </nav>
             <div className='exit-bar'>
                 <div className='sidebar-underline'></div>
-                <Link to={LOGIN} type="button" className='exit-btn text-heading-lg'>Выйти</Link>
+                <div className='exit-btn text-heading-lg' onClick={(e) => setOpen(true)}>Выйти</div>
+                {open &&
+                    <ExitModal setOpen={setOpen} />}
             </div>
         </aside>
     )
